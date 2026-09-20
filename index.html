@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Salon Name – Salon & Barber Shop</title>
+<meta name="description" content="Haircuts, beard grooming and styling. Browse services and request an appointment online.">
+<meta property="og:title" content="Your Salon Name – Salon & Barber Shop">
+<meta property="og:description" content="Browse services, hairstyles and offers, then request an appointment.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6ee;--alt:#f1eadb;--card:#fff;--ink:#1c1b19;--mut:#5d584f;--gold:#a8853a;--cta:#7d5f1c;--ctat:#fff;--line:#ded5c2;--dk:#1c1b19;--dkt:#f3ede0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141311;--alt:#1b1916;--card:#22201c;--ink:#f3ede0;--mut:#b5ad9c;--gold:#c9a24e;--cta:#c9a24e;--ctat:#141311;--line:#3a362f;--dk:#0d0c0b}}
+:root[data-theme="dark"]{--bg:#141311;--alt:#1b1916;--card:#22201c;--ink:#f3ede0;--mut:#b5ad9c;--gold:#c9a24e;--cta:#c9a24e;--ctat:#141311;--line:#3a362f;--dk:#0d0c0b}
+*,*::before,*::after{box-sizing:border-box}html{height:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;min-height:100%;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.15;margin:0 0 .5em;font-weight:700}
+h1{font-size:clamp(2.4rem,8vw,4.2rem)}h2{font-size:clamp(1.9rem,5vw,2.6rem)}h3{font-size:1.4rem}
+a{color:inherit}img{max-width:100%}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}.sec{padding:56px 0}.alt{background:var(--alt)}
+.eyebrow{color:var(--cta);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.mut{color:var(--mut)}
+header{position:sticky;top:0;z-index:20;background:var(--dk);color:var(--dkt);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;text-decoration:none;letter-spacing:.04em}
+.menu{display:none;gap:22px;align-items:center}.menu a{text-decoration:none;font-size:.92rem;padding:6px 0;border-bottom:2px solid transparent}.menu a.on,.menu a:hover{border-color:var(--gold)}
+.burger{background:none;border:1px solid #6b6455;color:inherit;border-radius:6px;padding:10px 14px;font-size:.9rem;min-height:44px}
+.drawer{display:none;flex-direction:column;padding:8px 20px 20px;border-top:1px solid #3a362f}.drawer.open{display:flex}
+.drawer a{padding:14px 0;border-bottom:1px solid #2c2925;text-decoration:none}
+@media(min-width:900px){.menu{display:flex}.burger,.drawer{display:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:4px;border:2px solid var(--cta);background:var(--cta);color:var(--ctat);font:600 .95rem Inter,sans-serif;text-decoration:none;cursor:pointer;letter-spacing:.04em;transition:transform .15s,filter .15s}
+.btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn.o{background:transparent;color:inherit;border-color:currentColor}.btn.sm{min-height:40px;padding:8px 16px;font-size:.85rem}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.hero{background:var(--dk);color:var(--dkt);padding:64px 0 72px}
+.hero p{max-width:560px;color:#d8d0bf;font-size:1.1rem}.hero .btn.o{color:var(--dkt)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s}
+.card:hover{box-shadow:0 8px 24px rgba(0,0,0,.12)}.card .b{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}.card .b .btn{margin-top:auto}
+.ph{aspect-ratio:4/3;background:linear-gradient(135deg,#d9cfb8,#b9ab8c);display:flex;align-items:center;justify-content:center;color:#3d372b;font-size:.78rem;text-align:center;padding:8px;letter-spacing:.06em;text-transform:uppercase;width:100%;border:0}
+.tag{font-size:.75rem;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.price{font-weight:600;font-size:1.1rem}.old{text-decoration:line-through;color:var(--mut);font-weight:400;margin-right:6px}
+.offer{background:var(--dk);color:var(--dkt);border:1px solid var(--gold);padding:24px;border-radius:6px;display:flex;flex-direction:column;gap:8px}
+.offer .btn.o{color:var(--dkt)}.offer .price{color:#e0bd6a;font-size:1.5rem}.offer small{color:#bdb5a3}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 12px}.chip{flex:none;min-height:44px;padding:8px 18px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;cursor:pointer;font:500 .85rem Inter,sans-serif}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input,textarea,select{width:100%;min-height:48px;padding:12px;border:1px solid var(--mut);border-radius:4px;background:var(--card);color:var(--ink);font:inherit}
+.err{color:#b3261e;font-size:.85rem;margin-top:4px}@media(prefers-color-scheme:dark){.err{color:#ff8a80}}
+.steps{display:flex;gap:6px;margin-bottom:24px}.steps i{flex:1;height:5px;background:var(--line);border-radius:3px}.steps i.d{background:var(--gold)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px}
+.sum div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}.sum div:last-child{border:0}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:15;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--dk)}.stick .btn{width:100%}
+@media(min-width:900px){.stick{display:none}}
+footer{background:var(--dk);color:var(--dkt);padding:48px 0 90px}footer a{display:block;padding:4px 0;text-decoration:none;color:#cfc7b5}
+.cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px}
+.lb .ph{max-width:640px}.lb button{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:16px}
+.pg{animation:fade .35s ease}@keyframes fade{from{opacity:0;transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.empty{text-align:center;padding:40px 12px;color:var(--mut)}
+</style></head><body>
+<header><div class="wrap nav"><a class="logo" href="#/">YOUR SALON NAME</a><nav class="menu" aria-label="Main" id="menu"></nav><button class="burger" id="bg" aria-expanded="false" aria-controls="dr">Menu</button></div><nav class="drawer wrap" id="dr" aria-label="Mobile"></nav></header>
+<main id="app" tabindex="-1"></main>
+<div class="stick" id="stick"><a class="btn" href="#/book">Book Appointment</a></div>
+<footer><div class="wrap"><div class="cols" id="ft"></div><p class="mut" style="margin-top:32px;font-size:.85rem">© <span id="yr"></span> <span id="fn"></span>. <a style="display:inline" href="#/privacy">Privacy Policy</a> · <a style="display:inline" href="#/terms">Terms & Conditions</a></p></div></footer>
+<script>
+/* ===== EDITABLE CONFIG – replace placeholders with real salon details ===== */
+const CONFIG={SALON_NAME:"Your Salon Name",TAGLINE:"Sharp cuts. Calm chairs. Your style, done right.",INTRO:"Grooming, haircuts and styling in a relaxed, professional space.",
+ADDRESS:"[Salon address – add here]",PHONE:"",WHATSAPP:"",EMAIL:"",INSTAGRAM_URL:"",FACEBOOK_URL:"",GOOGLE_MAPS_URL:"",CURRENCY:"₹",BOOKING_ENDPOINT:"",
+OPENING_HOURS:[["Mon–Sat","10:00 – 20:00"],["Sunday","Closed"]],SLOT_START:10,SLOT_END:19,CLOSED_DAYS:[0]};
+const SERVICES=[
+{id:"classic-cut",name:"Classic Haircut",category:"Haircut",description:"Professional haircut with personalised styling.",price:0,duration:30,featured:true,available:true,includes:["Consultation","Cut & finish","Neck clean-up"],suitable:"All hair types"},
+{id:"fade-cut",name:"Skin / Taper Fade",category:"Haircut",description:"Clean fade blended to your preferred length on top.",price:0,duration:40,featured:true,available:true,includes:["Consultation","Fade","Line-up"],suitable:"Short to medium hair"},
+{id:"beard-trim",name:"Beard Trim & Shape",category:"Beard",description:"Shaped and trimmed beard with clean edges.",price:0,duration:20,featured:true,available:true,includes:["Shaping","Edge line-up","Finishing oil"],suitable:"Any beard length"},
+{id:"hot-shave",name:"Hot Towel Shave",category:"Beard",description:"Traditional relaxing shave with hot towel.",price:0,duration:30,featured:false,available:true,includes:["Hot towel","Shave","Aftershave"],suitable:"All skin types"},
+{id:"hair-styling",name:"Hair Styling",category:"Hair Styling",description:"Event or everyday styling with quality products.",price:0,duration:30,featured:false,available:true,includes:["Wash","Style","Product finish"],suitable:"All hair types"},
+{id:"hair-spa",name:"Hair Spa Treatment",category:"Treatment",description:"Deep conditioning treatment for dry or tired hair.",price:0,duration:60,featured:false,available:true,includes:["Wash","Mask","Scalp massage"],suitable:"Dry or damaged hair"},
+{id:"facial",name:"Cleanup Facial",category:"Facial",description:"Refreshing facial to cleanse and brighten skin.",price:0,duration:45,featured:false,available:true,includes:["Cleanse","Mask","Moisturise"],suitable:"Most skin types"},
+{id:"combo",name:"Haircut + Beard Package",category:"Packages",description:"Our haircut and beard service together.",price:0,duration:50,featured:false,available:true,includes:["Haircut","Beard trim"],suitable:"Anyone"}];
+const OFFERS=[{id:"o1",title:"Haircut + Beard Combo",description:"Sample offer – edit in data.",original:0,price:0,validity:"[Add validity]",terms:"[Add terms]",service:"combo"},{id:"o2",title:"First Visit Special",description:"Sample offer – edit in data.",original:0,price:0,validity:"[Add validity]",terms:"[Add terms]",service:"classic-cut"}];
+const STYLES=[["Classic Side Part","Classic","Straight to wavy"],["Textured Crop","Modern","Thick or wavy"],["Low Fade","Fade","All types"],["Quiff","Trending","Medium length"],["Slick Back","Formal","Medium to long"],["Short Beard Fade","Beard Styles","Any beard"]].map((s,i)=>({id:"h"+i,name:s[0],category:s[1],hairType:s[2],description:"Ask your stylist for this look."}));
+const GALLERY=["Salon interior","Haircut","Hairstyle","Beard styling","Team","Reception"];
+const TEAM=[{name:"[Team member]",role:"Senior Stylist",bio:"Add a short bio."},{name:"[Team member]",role:"Barber",bio:"Add a short bio."}];
+const TESTIMONIALS=[{name:"[Customer name]",text:"Placeholder – replace with a genuine review."},{name:"[Customer name]",text:"Placeholder – replace with a genuine review."}];
+const send=d=>{if(!CONFIG.BOOKING_ENDPOINT)return;try{fetch(CONFIG.BOOKING_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(d)})}catch(e){}};
+const bookings=[]; // in-memory only; swap for a backend call in submitBooking()
+/* ===== helpers ===== */
+const $=s=>document.querySelector(s),esc=t=>String(t??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money=n=>n>0?CONFIG.CURRENCY+n:"Price on request",dur=m=>m+" min";
+const ph=l=>`<div class="ph" role="img" aria-label="${esc(l)} photo placeholder">${esc(l)}<br>(replace with photo)</div>`;
+const tel=()=>CONFIG.PHONE?`tel:${CONFIG.PHONE.replace(/\s/g,"")}`:"#/contact";
+const wa=(t)=>CONFIG.WHATSAPP?`https://wa.me/${CONFIG.WHATSAPP.replace(/\D/g,"")}${t?"?text="+encodeURIComponent(t):""}`:"#/contact";
+const NAV=[["","Home"],["services","Services"],["hairstyles","Hairstyles"],["offers","Offers"],["about","About"],["gallery","Gallery"],["contact","Contact"]];
+function svcCard(s){return `<article class="card"><a href="#/service/${s.id}" style="text-decoration:none">${ph(s.name)}</a><div class="b"><span class="tag">${esc(s.category)}</span><h3><a href="#/service/${s.id}" style="text-decoration:none">${esc(s.name)}</a></h3><p class="mut" style="margin:0">${esc(s.description)}</p><p class="price" style="margin:4px 0">${money(s.price)} <span class="mut" style="font-weight:400;font-size:.9rem">· ${dur(s.duration)}</span></p><a class="btn sm" href="#/book?svc=${s.id}">Book Now</a></div></article>`}
+function offerCard(o){return `<article class="offer"><span class="tag" style="color:#e0bd6a">Limited time offer</span><h3>${esc(o.title)}</h3><p style="margin:0">${esc(o.description)}</p><div class="price">${o.original?`<span class="old">${CONFIG.CURRENCY}${o.original}</span>`:""}${o.price?CONFIG.CURRENCY+o.price:"Price to be added"}</div><small>Valid: ${esc(o.validity)} · ${esc(o.terms)}</small><a class="btn o" href="#/book?svc=${o.service}">Book Offer</a></article>`}
+/* ===== pages ===== */
+const P={};
+P[""]=()=>`<section class="hero"><div class="wrap"><div class="eyebrow" style="color:#e0bd6a">${esc(CONFIG.SALON_NAME)}</div><h1>${esc(CONFIG.TAGLINE)}</h1><p>${esc(CONFIG.INTRO)}</p><div class="row" style="margin-top:24px"><a class="btn" href="#/book">Book Reservation</a><a class="btn o" href="#/services">Visit All Shop</a></div></div></section>
+<section class="sec"><div class="wrap"><div class="eyebrow">Popular</div><h2>Featured services</h2><div class="grid">${SERVICES.filter(s=>s.featured&&s.available).map(svcCard).join("")}</div></div></section>
+<section class="sec alt"><div class="wrap"><div class="eyebrow">Offers</div><h2>Current offers</h2>${OFFERS.length?`<div class="grid">${OFFERS.map(offerCard).join("")}</div>`:`<p class="empty">No active offers right now. Check back soon.</p>`}</div></section>
+<section class="sec"><div class="wrap"><div class="eyebrow">Why choose us</div><h2>A simple, comfortable visit</h2><div class="grid">${["Professional service","Clean & hygienic environment","Personalised styling","Easy booking"].map(t=>`<div class="box"><h3>${t}</h3><p class="mut" style="margin:0">[Edit this text to describe how you deliver this.]</p></div>`).join("")}</div></div></section>
+<section class="sec alt"><div class="wrap"><div class="eyebrow">Reviews</div><h2>What customers say</h2><div class="grid">${TESTIMONIALS.map(t=>`<figure class="box" style="margin:0"><blockquote style="margin:0 0 8px">${esc(t.text)}</blockquote><figcaption class="mut">— ${esc(t.name)}</figcaption></figure>`).join("")}</div></div></section>`;
+let fCat="All",fQ="";
+P.services=()=>{const cats=["All",...new Set(SERVICES.map(s=>s.category))];return `<section class="sec"><div class="wrap"><div class="eyebrow">All services</div><h1 style="font-size:2.6rem">Visit all shop</h1><label for="q">Search services</label><input id="q" type="search" placeholder="Try fade, beard, facial…" value="${esc(fQ)}"><div class="chips" role="group" aria-label="Categories">${cats.map(c=>`<button class="chip" aria-pressed="${c===fCat}" data-c="${esc(c)}">${esc(c)}</button>`).join("")}</div><div id="res" aria-live="polite"></div></div></section>`};
+function filt(){const q=fQ.toLowerCase(),l=SERVICES.filter(s=>s.available&&(fCat==="All"||s.category===fCat)&&(s.name+s.description+s.category).toLowerCase().includes(q));$("#res").innerHTML=l.length?`<div class="grid">${l.map(svcCard).join("")}</div>`:`<p class="empty">${SERVICES.length?"No services match your search. Try another word or category.":"Services will be updated soon."}</p>`}
+P.service=id=>{const s=SERVICES.find(x=>x.id===id);if(!s)return P.notfound();const rel=SERVICES.filter(x=>x.category===s.category&&x.id!==s.id).slice(0,3);return `<section class="sec"><div class="wrap"><a href="#/services">← All services</a><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:16px">${ph(s.name)}<div><span class="tag">${esc(s.category)}</span><h1 style="font-size:2.6rem">${esc(s.name)}</h1><p>${esc(s.description)}</p><p class="price">${money(s.price)} · ${dur(s.duration)}</p><h3>What's included</h3><ul>${s.includes.map(i=>`<li>${esc(i)}</li>`).join("")}</ul><p><strong>Suitable for:</strong> ${esc(s.suitable)}</p><a class="btn" href="#/book?svc=${s.id}">Book This Service</a></div></div>${rel.length?`<h2 style="margin-top:48px">Related services</h2><div class="grid">${rel.map(svcCard).join("")}</div>`:""}</div></section>`};
+let hCat="All";
+P.hairstyles=()=>{const cats=["All",...new Set(STYLES.map(s=>s.category))];const l=STYLES.filter(s=>hCat==="All"||s.category===hCat);return `<section class="sec"><div class="wrap"><div class="eyebrow">Catalog</div><h1 style="font-size:2.6rem">Hairstyles</h1><div class="chips" role="group" aria-label="Style categories">${cats.map(c=>`<button class="chip" data-h="${esc(c)}" aria-pressed="${c===hCat}">${esc(c)}</button>`).join("")}</div><div class="grid">${l.map(s=>`<article class="card">${ph(s.name)}<div class="b"><span class="tag">${esc(s.category)}</span><h3>${esc(s.name)}</h3><p class="mut" style="margin:0">${esc(s.description)}</p><p class="mut" style="margin:0;font-size:.9rem">Suits: ${esc(s.hairType)}</p><a class="btn sm" href="#/book?note=${encodeURIComponent("Style requested: "+s.name)}">Ask For This Style</a></div></article>`).join("")}</div></div></section>`};
+P.offers=()=>`<section class="sec"><div class="wrap"><div class="eyebrow">Offers</div><h1 style="font-size:2.6rem">Current offers</h1>${OFFERS.length?`<div class="grid">${OFFERS.map(offerCard).join("")}</div>`:`<p class="empty">No active offers right now. Check back soon.</p>`}</div></section>`;
+P.about=()=>`<section class="sec"><div class="wrap" style="max-width:820px"><div class="eyebrow">About</div><h1 style="font-size:2.6rem">Welcome to ${esc(CONFIG.SALON_NAME)}</h1>${ph("Salon photo")}<p style="margin-top:20px">[Write your salon's story here: who you are, how long you have been working, and what customers can expect.]</p><h2 style="margin-top:32px">Our approach</h2><p>[Describe your styling approach, hygiene practices and customer experience in your own words.]</p><a class="btn" href="#/book">Book Appointment</a></div></section>
+<section class="sec alt"><div class="wrap"><h2>Our team</h2><div class="grid">${TEAM.map(t=>`<article class="card">${ph("Team photo")}<div class="b"><h3>${esc(t.name)}</h3><span class="tag">${esc(t.role)}</span><p class="mut" style="margin:0">${esc(t.bio)}</p></div></article>`).join("")}</div></div></section>`;
+P.gallery=()=>`<section class="sec"><div class="wrap"><div class="eyebrow">Gallery</div><h1 style="font-size:2.6rem">Gallery</h1><div class="grid">${GALLERY.map((g,i)=>`<button class="ph" data-g="${i}" aria-label="Enlarge ${esc(g)}" style="cursor:zoom-in">${esc(g)}<br>(replace with photo)</button>`).join("")}</div></div></section>`;
+P.contact=()=>{const h=CONFIG.OPENING_HOURS.map(r=>`<div><strong>${esc(r[0])}</strong>: ${esc(r[1])}</div>`).join("");return `<section class="sec"><div class="wrap"><div class="eyebrow">Contact</div><h1 style="font-size:2.6rem">${esc(CONFIG.SALON_NAME)}</h1><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"><div class="box"><p><strong>Address</strong><br>${esc(CONFIG.ADDRESS)}</p><p><strong>Phone</strong><br>${esc(CONFIG.PHONE||"[Add phone]")}</p><p><strong>Email</strong><br>${esc(CONFIG.EMAIL||"[Add email]")}</p><p><strong>Hours</strong></p>${h}<div class="row" style="margin-top:16px"><a class="btn sm" href="${tel()}">Call Now</a><a class="btn sm o" href="${wa()}">WhatsApp</a><a class="btn sm o" href="${CONFIG.GOOGLE_MAPS_URL||"#/contact"}" ${CONFIG.GOOGLE_MAPS_URL?'target="_blank" rel="noopener"':""}>Get Directions</a></div>${CONFIG.GOOGLE_MAPS_URL?"":`<p class="mut" style="font-size:.85rem">Add GOOGLE_MAPS_URL in the config to enable directions.</p>`}</div><form class="box" id="cf" novalidate><h3>Send a message</h3><label for="cn">Name</label><input id="cn"><div class="err" id="cne"></div><label for="cp">Phone</label><input id="cp" type="tel" inputmode="tel"><div class="err" id="cpe"></div><label for="ce">Email (optional)</label><input id="ce" type="email"><label for="cm">Message</label><textarea id="cm" rows="4"></textarea><div class="err" id="cme"></div><p><button class="btn" type="submit">Send Message</button></p><p id="cok" class="mut" role="status"></p></form></div></div></section>`};
+/* ===== booking ===== */
+let B={step:1,svc:"",date:"",time:"",name:"",phone:"",email:"",notes:"",ref:""};
+const slots=()=>{const a=[];for(let h=CONFIG.SLOT_START;h<CONFIG.SLOT_END;h++)["00","30"].forEach(m=>a.push(String(h).padStart(2,"0")+":"+m));return a};
+const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+const sv=()=>SERVICES.find(s=>s.id===B.svc);
+P.book=()=>{const s=sv(),n=6,bar=`<div class="steps" aria-label="Step ${B.step} of ${n}">${Array.from({length:n},(_,i)=>`<i class="${i<B.step?"d":""}"></i>`).join("")}</div>`;let h="";
+if(B.step===1)h=`<h2>1. Choose service</h2><div class="grid" style="gap:10px">${SERVICES.filter(x=>x.available).map(x=>`<button class="chip" style="border-radius:6px;text-align:left;min-height:64px" data-s="${x.id}" aria-pressed="${x.id===B.svc}"><strong>${esc(x.name)}</strong><br><span class="mut">${money(x.price)} · ${dur(x.duration)}</span></button>`).join("")}</div><div class="err" id="e"></div><p><button class="btn" data-n>Continue</button></p>`;
+if(B.step===2){const t=new Date();h=`<h2>2. Choose date</h2><label for="d">Preferred date</label><input id="d" type="date" min="${iso(t)}" value="${B.date}"><div class="err" id="e"></div><p><button class="btn o" data-p>Back</button> <button class="btn" data-n>Continue</button></p>`}
+if(B.step===3)h=`<h2>3. Choose time</h2><div class="slots" role="group" aria-label="Times">${slots().map(t=>`<button class="chip" data-t="${t}" aria-pressed="${t===B.time}">${t}</button>`).join("")}</div><p class="mut" style="font-size:.9rem">Times are preferences; the salon will confirm availability.</p><div class="err" id="e"></div><p><button class="btn o" data-p>Back</button> <button class="btn" data-n>Continue</button></p>`;
+if(B.step===4)h=`<h2>4. Your details</h2><label for="n">Full name</label><input id="n" autocomplete="name" value="${esc(B.name)}"><label for="p">Phone number</label><input id="p" type="tel" inputmode="tel" autocomplete="tel" value="${esc(B.phone)}"><label for="m">Email (optional)</label><input id="m" type="email" autocomplete="email" value="${esc(B.email)}"><label for="o">Notes (optional)</label><textarea id="o" rows="3">${esc(B.notes)}</textarea><div class="err" id="e" role="alert"></div><p><button class="btn o" data-p>Back</button> <button class="btn" data-n>Review</button></p>`;
+if(B.step===5)h=`<h2>5. Review</h2><div class="box sum"><div><span>Service</span><strong>${esc(s.name)}</strong></div><div><span>Date</span><strong>${esc(B.date)}</strong></div><div><span>Time</span><strong>${esc(B.time)}</strong></div><div><span>Duration</span><strong>${dur(s.duration)}</strong></div><div><span>Price</span><strong>${money(s.price)}</strong></div><div><span>Name</span><strong>${esc(B.name)}</strong></div><div><span>Phone</span><strong>${esc(B.phone)}</strong></div>${B.notes?`<div><span>Notes</span><strong>${esc(B.notes)}</strong></div>`:""}</div><p class="mut">This sends an appointment request. The salon will confirm it with you.</p><p><button class="btn o" data-p>Back</button> <button class="btn" data-n>Send Appointment Request</button></p>`;
+if(B.step===6)h=`<h2>✓ Appointment request received</h2><p>Thank you, ${esc(B.name)}. Your request is <strong>not yet confirmed</strong>; the salon will contact you.</p><div class="box sum"><div><span>Reference</span><strong>${esc(B.ref)}</strong></div><div><span>Service</span><strong>${esc(s.name)}</strong></div><div><span>Date</span><strong>${esc(B.date)}</strong></div><div><span>Time</span><strong>${esc(B.time)}</strong></div><div><span>Name</span><strong>${esc(B.name)}</strong></div></div><div class="row" style="margin-top:16px"><a class="btn" href="#/">Back to Home</a><a class="btn o" href="#/services" style="color:var(--ink)">View Services</a>${CONFIG.WHATSAPP?`<a class="btn o" style="color:var(--ink)" href="${wa(`Hi, I'd like to book: ${s.name} on ${B.date} at ${B.time}. Name: ${B.name}. Ref: ${B.ref}`)}">Contact Salon on WhatsApp</a>`:""}</div>`;
+return `<section class="sec"><div class="wrap" style="max-width:720px"><h1 style="font-size:2.4rem">Book appointment</h1>${bar}${h}</div></section>`};
+function bookNext(){const e=$("#e"),bad=m=>{e.textContent=m;return 0};
+if(B.step===1&&!B.svc)return bad("Please choose a service.");
+if(B.step===2){B.date=$("#d").value;const d=new Date(B.date+"T00:00");if(!B.date||isNaN(d))return bad("Please choose a date.");if(B.date<iso(new Date()))return bad("Please choose today or a future date.");if(CONFIG.CLOSED_DAYS.includes(d.getDay()))return bad("The salon is closed on this day. Please choose another date.")}
+if(B.step===3&&!B.time)return bad("Please select a time.");
+if(B.step===4){B.name=$("#n").value.trim();B.phone=$("#p").value.trim();B.email=$("#m").value.trim();B.notes=$("#o").value.trim().slice(0,500);
+if(!B.name)return bad("Please enter your name.");if(!/^\+?[\d\s\-()]{7,15}$/.test(B.phone))return bad("Please enter a valid phone number.");if(B.email&&!/^\S+@\S+\.\S+$/.test(B.email))return bad("Please enter a valid email address.")}
+if(B.step===5){B.ref="REQ-"+Date.now().toString(36).toUpperCase();bookings.push({id:B.ref,name:B.name,phone:B.phone,email:B.email,service:B.svc,date:B.date,time:B.time,notes:B.notes,status:"Pending",created:new Date().toISOString()});send({type:"booking",...bookings[bookings.length-1]})}
+B.step++;route();scrollTo(0,0)}
+P.privacy=()=>`<section class="sec"><div class="wrap" style="max-width:760px"><h1>Privacy Policy</h1><p>[Replace with your privacy policy. This site collects only the details you enter in booking and contact forms, used to respond to you.]</p></div></section>`;
+P.terms=()=>`<section class="sec"><div class="wrap" style="max-width:760px"><h1>Terms & Conditions</h1><p>[Replace with your terms, including booking, cancellation and pricing policies.]</p></div></section>`;
+P.notfound=()=>`<section class="sec"><div class="wrap empty"><h1>Page not found</h1><a class="btn" href="#/">Back to Home</a></div></section>`;
+/* ===== router ===== */
+function route(){const h=location.hash.slice(2),[path,qs]=h.split("?"),[k,arg]=path.split("/"),q=new URLSearchParams(qs||"");
+if(k==="book"&&B.step===6&&!q.size&&false){}
+if(k==="book"&&q.get("svc")&&SERVICES.some(s=>s.id===q.get("svc"))&&B.svc!==q.get("svc")){B={...B,step:2,svc:q.get("svc"),ref:""}}
+if(k==="book"&&q.get("note")&&!B.notes)B.notes=q.get("note");
+const f=P[k||""];$("#app").innerHTML=`<div class="pg">${f?f(arg):P.notfound()}</div>`;
+const nav=NAV.map(n=>`<a href="#/${n[0]}" class="${n[0]===k?"on":""}">${n[1]}</a>`).join("")+`<a class="btn sm" href="#/book">Book Appointment</a>`;$("#menu").innerHTML=nav;$("#dr").innerHTML=nav;
+$("#stick").style.display=k==="book"?"none":"";document.title=(k?k[0].toUpperCase()+k.slice(1)+" – ":"")+CONFIG.SALON_NAME;
+if(k==="services")filt();if(!k||k==="services"||k==="offers"||k==="hairstyles")scrollTo(0,0)}
+addEventListener("hashchange",()=>{$("#dr").classList.remove("open");$("#bg").setAttribute("aria-expanded","false");if(location.hash.startsWith("#/book")&&location.hash.indexOf("svc=")<0&&B.step===6)B={step:1,svc:"",date:"",time:"",name:"",phone:"",email:"",notes:"",ref:""};route();$("#app").focus({preventScroll:true})});
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
+if(t.id==="bg"){const o=$("#dr").classList.toggle("open");t.setAttribute("aria-expanded",o)}
+if(t.dataset.c){fCat=t.dataset.c;route()}if(t.dataset.h){hCat=t.dataset.h;route()}
+if(t.dataset.s!==undefined){B.svc=t.dataset.s;route()}if(t.dataset.t){B.time=t.dataset.t;route()}
+if(t.hasAttribute("data-n"))bookNext();if(t.hasAttribute("data-p")){B.step--;route()}
+if(t.dataset.g!==undefined){const l=document.createElement("div");l.className="lb";l.setAttribute("role","dialog");l.setAttribute("aria-modal","true");l.innerHTML=`<button class="btn sm">Close</button>${ph(GALLERY[t.dataset.g])}`;l.onclick=ev=>{if(ev.target!==l.querySelector(".ph"))l.remove()};document.body.appendChild(l);l.querySelector("button").focus()}});
+document.addEventListener("input",e=>{if(e.target.id==="q"){fQ=e.target.value;filt()}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelector(".lb")?.remove()});
+document.addEventListener("submit",e=>{if(e.target.id!=="cf")return;e.preventDefault();const g=i=>$("#"+i).value.trim();let ok=true;
+[["cn","cne",g("cn"),"Please enter your name."],["cp","cpe",/^\+?[\d\s\-()]{7,15}$/.test(g("cp")),"Please enter a valid phone number."],["cm","cme",g("cm"),"Please write a message."]].forEach(r=>{$("#"+r[1]).textContent=r[2]?"":r[3];if(!r[2])ok=false});
+if(ok){send({type:"message",name:g("cn"),phone:g("cp"),email:g("ce"),message:g("cm")});$("#cok").textContent="Thanks! Message noted. To reach the salon right away, please call or use WhatsApp (message sending requires a backend to be connected).";e.target.reset()}});
+/* ===== footer & SEO ===== */
+$("#yr").textContent=new Date().getFullYear();$("#fn").textContent=CONFIG.SALON_NAME;
+$("#ft").innerHTML=`<div><h3>${esc(CONFIG.SALON_NAME)}</h3><p class="mut">${esc(CONFIG.INTRO)}</p></div><div><h3>Quick links</h3>${NAV.map(n=>`<a href="#/${n[0]}">${n[1]}</a>`).join("")}</div><div><h3>Visit</h3><p class="mut">${esc(CONFIG.ADDRESS)}</p>${CONFIG.OPENING_HOURS.map(r=>`<p class="mut" style="margin:0">${esc(r[0])}: ${esc(r[1])}</p>`).join("")}${[["Instagram",CONFIG.INSTAGRAM_URL],["Facebook",CONFIG.FACEBOOK_URL]].filter(s=>s[1]).map(s=>`<a href="${esc(s[1])}" rel="noopener">${s[0]}</a>`).join("")}</div>`;
+const ld=document.createElement("script");ld.type="application/ld+json";ld.text=JSON.stringify({"@context":"https://schema.org","@type":"HairSalon",name:CONFIG.SALON_NAME,...(CONFIG.PHONE&&{telephone:CONFIG.PHONE}),...(CONFIG.EMAIL&&{email:CONFIG.EMAIL})});document.head.appendChild(ld);
+route();
+</script></body></html>
