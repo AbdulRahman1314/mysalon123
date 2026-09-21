@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salon Name – Premium Salon & Barber</title>
+<meta name="description" content="Premium haircuts, beard grooming and styling. See our services, prices and gallery, and contact us on WhatsApp.">
+<meta property="og:title" content="Salon Name"><meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0d0c;--pn:#171513;--ink:#f3ead8;--mut:#b9ae99;--gold:#c9a24e;--gold2:#e2c27a;--wine:#4a1420;--line:#3a3227}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden;background-color:var(--bg);background-image:linear-gradient(45deg,rgba(201,162,78,.06) 1px,transparent 1px),linear-gradient(-45deg,rgba(201,162,78,.06) 1px,transparent 1px);background-size:44px 44px}
+h1,h2,h3{font-family:Cinzel,Georgia,serif;font-weight:700;line-height:1.2;margin:0 0 .5em;letter-spacing:.04em}
+h1{font-size:clamp(2rem,8vw,3.4rem)}h2{font-size:clamp(1.5rem,5vw,2.1rem)}h3{font-size:1.1rem}
+a{color:inherit}:focus-visible{outline:3px solid var(--gold2);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px;position:relative}.sec{padding:52px 0}
+.eyebrow{color:var(--gold);font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+.mut{color:var(--mut)}
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);margin:16px 0 22px;max-width:320px}.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.orn::after{transform:scaleX(-1)}
+header{position:sticky;top:0;z-index:10;background:rgba(14,13,12,.96);border-bottom:1px solid var(--gold)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Cinzel,serif;font-size:1.05rem;font-weight:700;letter-spacing:.2em;text-decoration:none;color:var(--gold2);text-transform:uppercase}
+.menu{display:none;gap:28px}.menu a{text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 0;border-bottom:1px solid transparent}.menu a.on,.menu a:hover{border-color:var(--gold);color:var(--gold2)}
+.bg{background:none;border:1px solid var(--gold);color:var(--gold2);border-radius:2px;padding:10px 14px;min-height:44px;font:600 .75rem Inter;letter-spacing:.16em;text-transform:uppercase}
+.dr{display:none;flex-direction:column;padding:0 20px 14px}.dr.open{display:flex}.dr a{padding:14px 0;border-top:1px solid var(--line);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem}
+@media(min-width:800px){.menu{display:flex}.bg,.dr{display:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;border:1px solid var(--gold);background:var(--gold);color:#1a1408;font:600 .8rem Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:filter .2s}
+.btn:hover{filter:brightness(1.12)}.btn.o{background:transparent;color:var(--gold2)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.hero{position:relative;overflow:hidden;padding:56px 0 60px;border-bottom:1px solid var(--line)}
+.hero.big{padding:76px 0 84px}.hero p{max-width:520px;color:var(--mut);font-size:1.05rem}
+.h-home{background:radial-gradient(ellipse at 85% 15%,rgba(74,20,32,.85),transparent 62%),linear-gradient(#141210,rgba(14,13,12,.4))}
+.h-services{background:radial-gradient(ellipse at 15% 25%,rgba(20,52,42,.85),transparent 62%),linear-gradient(#111412,rgba(14,13,12,.4))}
+.h-gallery{background:radial-gradient(ellipse at 85% 30%,rgba(22,32,66,.9),transparent 62%),linear-gradient(#111116,rgba(14,13,12,.4))}
+.h-contact{background:radial-gradient(ellipse at 15% 20%,rgba(74,20,32,.85),transparent 62%),linear-gradient(#141210,rgba(14,13,12,.4))}
+.deco{position:absolute;right:-30px;top:50%;transform:translateY(-50%) rotate(-12deg);width:min(62vw,340px);opacity:.15;color:var(--gold);pointer-events:none}
+.deco svg,.im svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pole{height:12px;background:repeating-linear-gradient(-45deg,var(--gold) 0 10px,var(--wine) 10px 20px,var(--ink) 20px 30px,var(--wine) 30px 40px);opacity:.8}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{background:var(--pn);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.im{width:100%;aspect-ratio:4/3;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2a0f18,#14110f);color:var(--gold)}.im svg{width:64px;opacity:.65}
+.card .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.meta{display:flex;justify-content:space-between;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.card p{margin:0;color:var(--mut);font-size:.95rem}
+.price{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font:700 1.35rem Cinzel,serif;color:var(--gold2)}
+.book{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;color:var(--gold2);text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--gold)}
+.cat{margin:34px 0 14px;color:var(--gold2)}
+.gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.fr{margin:0;padding:6px;background:var(--pn);border:1px solid var(--gold)}.fr img,.fr div{width:100%;aspect-ratio:1;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2a0f18,#14110f);color:var(--mut);font-size:.72rem;text-align:center;letter-spacing:.12em;text-transform:uppercase}
+.box{background:var(--pn);border:1px solid var(--gold);padding:24px}
+footer{border-top:1px solid var(--gold);background:#0a0908;color:var(--mut);padding:30px 0 96px;text-align:center;font-size:.85rem;letter-spacing:.08em}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:#0a0908;border-top:1px solid var(--gold);z-index:9}.bar .btn{flex:1;padding:12px 8px}
+@media(min-width:800px){.bar{display:none}footer{padding-bottom:30px}}
+.pg{animation:f .35s ease}@keyframes f{from{opacity:0;transform:translateY(8px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header><div class="wrap nav"><a class="logo" href="#/" id="lg"></a><nav class="menu" id="mn" aria-label="Main"></nav><button class="bg" id="bg" aria-expanded="false" aria-controls="dr">Menu</button></div><nav class="dr wrap" id="dr" aria-label="Mobile"></nav></header>
+<main id="app"></main>
+<div class="bar" id="bar"></div>
+<footer><div class="wrap" id="ft"></div></footer>
+<script>
+/* ===== EDIT ONLY THIS PART ===== */
+const C={
+NAME:"Salon Name",
+TAGLINE:"Precision cuts. Refined grooming. A royal experience.",
+ABOUT:"[Write 2-3 lines about your salon: who you are, your experience, and what customers can expect.]",
+WHATSAPP:"",            // digits only with country code, e.g. 919876543210
+PHONE:"",               // e.g. +91 98765 43210
+SHOW_ADDRESS:true,
+ADDRESS:"[Add salon address here]",
+MAPS_URL:"",            // Google Maps share link (optional)
+HOURS:[["Mon–Sat","10:00 AM – 8:00 PM"],["Sunday","Closed"]],
+GALLERY:[]              // photo file names uploaded next to index.html, e.g. ["cut1.jpg","cut2.jpg"]
+};
+// img = photo file name (or "" for the default icon). Prices are placeholders.
+const SERVICES=[
+{cat:"Haircut",name:"Classic Haircut",desc:"Precision cut with personalised styling.",price:"₹XXX",min:30,img:""},
+{cat:"Haircut",name:"Skin / Taper Fade",desc:"Clean fade blended to your preferred length.",price:"₹XXX",min:40,img:""},
+{cat:"Beard",name:"Beard Sculpt",desc:"Shaped and trimmed with sharp, clean edges.",price:"₹XXX",min:20,img:""},
+{cat:"Beard",name:"Hot Towel Shave",desc:"Traditional relaxing shave with hot towel.",price:"₹XXX",min:30,img:""},
+{cat:"Treatment",name:"Hair Spa",desc:"Deep conditioning for dry or tired hair.",price:"₹XXX",min:60,img:""},
+{cat:"Treatment",name:"Cleanup Facial",desc:"Cleanse, mask and moisturise.",price:"₹XXX",min:45,img:""},
+{cat:"Packages",name:"Haircut + Beard Package",desc:"Signature haircut with a sculpted beard finish.",price:"₹XXX",min:75,img:""}
+];
+/* ===== END EDIT ===== */
+const $=s=>document.querySelector(s);
+const S={scissors:'<svg viewBox="0 0 100 100"><circle cx="28" cy="80" r="10"/><circle cx="72" cy="80" r="10"/><path d="M34 72 68 12M66 72 32 12"/></svg>',
+comb:'<svg viewBox="0 0 100 100"><rect x="8" y="34" width="84" height="22" rx="4"/><path d="M18 56v16M30 56v16M42 56v16M54 56v16M66 56v16M78 56v16"/></svg>',
+razor:'<svg viewBox="0 0 100 100"><path d="M12 64 68 18l12 14-56 46z"/><path d="M68 18 84 6M22 78 12 92"/></svg>',
+mirror:'<svg viewBox="0 0 100 100"><ellipse cx="50" cy="38" rx="28" ry="32"/><ellipse cx="50" cy="38" rx="21" ry="25"/><path d="M50 70v22M38 92h24"/></svg>'};
+function ph(el){const d=document.createElement("div");d.className="im";d.innerHTML=S.scissors;el.replaceWith(d)}
+const waNum=()=>C.WHATSAPP.replace(/\D/g,"");
+const wa=t=>waNum()?`https://wa.me/${waNum()}?text=${encodeURIComponent(t||"Hello, I would like to know more about your services.")}`:"";
+const tel=()=>C.PHONE?`tel:${C.PHONE.replace(/[^\d+]/g,"")}`:"";
+const map=()=>C.MAPS_URL||`https://www.google.com/maps/search/${encodeURIComponent(C.ADDRESS)}`;
+const bWA=(c="")=>wa()?`<a class="btn ${c}" href="${wa()}" target="_blank" rel="noopener">WhatsApp</a>`:"";
+const bCall=(c="")=>tel()?`<a class="btn ${c}" href="${tel()}">Call Now</a>`:"";
+const card=s=>`<article class="card">${s.img?`<img class="im" src="${s.img}" alt="${s.name}" loading="lazy" onerror="ph(this)">`:`<div class="im" role="img" aria-label="${s.name}">${S.scissors}</div>`}<div class="b"><div class="meta"><span>${s.cat}</span><span>${s.min} min</span></div><h3>${s.name}</h3><p>${s.desc}</p><div class="price">${s.price}</div></div></article>`;
+const hero=(cls,eb,title,sub,deco,big)=>`<section class="hero ${cls}${big?" big":""}"><div class="deco" aria-hidden="true">${deco}</div><div class="wrap"><div class="eyebrow">${eb}</div><h1>${title}</h1><div class="orn">◆</div>${sub}</div></section>`;
+const NAV=[["","Home"],["services","Services & Prices"],["gallery","Gallery"],["contact","Contact"]];
+const P={
+"":()=>hero("h-home","Welcome",C.NAME,`<p>${C.TAGLINE}</p><div class="row" style="margin-top:22px"><a class="btn" href="#/services">View Services</a>${bWA("o")||'<a class="btn o" href="#/contact">Contact Us</a>'}</div>`,S.scissors,1)+
+`<section class="sec"><div class="wrap"><div class="eyebrow">Signature</div><h2>Featured services</h2><div class="orn">◆</div><div class="grid">${SERVICES.filter((s,i)=>[0,2,6].includes(i)).map(card).join("")}</div><p><a class="book" href="#/services">See full price list →</a></p></div></section>
+<section class="sec"><div class="wrap" style="max-width:720px"><div class="eyebrow">About us</div><h2>Welcome to ${C.NAME}</h2><div class="orn">◆</div><p class="mut">${C.ABOUT}</p></div></section>`,
+services:()=>hero("h-services","Price list","Services & Prices",'<p>Premium grooming, priced clearly.</p>',S.razor)+`<section class="sec"><div class="wrap">${[...new Set(SERVICES.map(s=>s.cat))].map(c=>`<h2 class="cat">${c}</h2><div class="grid">${SERVICES.filter(s=>s.cat===c).map(card).join("")}</div>`).join("")}<p class="mut" style="margin-top:24px">Prices may change. Please confirm on WhatsApp or call.</p></div></section>`,
+gallery:()=>hero("h-gallery","Gallery","Our Work",'<p>A look at the cuts, styles and space.</p>',S.mirror)+`<section class="sec"><div class="wrap"><div class="gal">${(C.GALLERY.length?C.GALLERY:[1,2,3,4,5,6]).map((f,i)=>`<figure class="fr">${C.GALLERY.length?`<img src="${f}" alt="Salon photo ${i+1}" loading="lazy" onerror="this.outerHTML='<div>Photo missing</div>'">`:"<div>Add photo</div>"}</figure>`).join("")}</div></div></section>`,
+contact:()=>hero("h-contact","Contact","Visit Us",'<p>We would love to see you.</p>',S.comb)+`<div class="pole"></div><section class="sec"><div class="wrap" style="max-width:720px"><div class="box">${C.SHOW_ADDRESS?`<p><b>Address</b><br>${C.ADDRESS}</p>`:""}<p><b>Phone</b><br>${C.PHONE||"[Add phone number]"}</p><p><b>Opening hours</b></p>${C.HOURS.map(h=>`<div>${h[0]}: ${h[1]}</div>`).join("")}<div class="row" style="margin-top:20px">${bWA()}${bCall("o")}${C.SHOW_ADDRESS?`<a class="btn o" href="${map()}" target="_blank" rel="noopener">Get Directions</a>`:""}</div>${wa()?"":'<p class="mut" style="font-size:.85rem">Add the WhatsApp number in the settings to show the WhatsApp button.</p>'}</div></div></section>`};
+function route(){const k=location.hash.slice(2);const f=P[k]||P[""];$("#app").innerHTML=`<div class="pg">${f()}</div>`;
+const n=NAV.map(x=>`<a href="#/${x[0]}" class="${x[0]===k?"on":""}">${x[1]}</a>`).join("");$("#mn").innerHTML=n;$("#dr").innerHTML=n;
+document.title=(k?(NAV.find(x=>x[0]===k)||[,""])[1]+" – ":"")+C.NAME;scrollTo(0,0)}
+addEventListener("hashchange",()=>{$("#dr").classList.remove("open");$("#bg").setAttribute("aria-expanded","false");route()});
+$("#bg").onclick=()=>{const o=$("#dr").classList.toggle("open");$("#bg").setAttribute("aria-expanded",o)};
+$("#lg").textContent=C.NAME;$("#ft").innerHTML=`◆ © ${new Date().getFullYear()} ${C.NAME} ◆`;
+$("#bar").innerHTML=(bCall()+bWA("o"))||'<a class="btn" href="#/contact">Contact Us</a>';
+route();
+</script></body></html>
