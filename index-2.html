@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salon Name – Hair, Beauty & Grooming</title>
+<meta name="description" content="Salon services, price list, gallery and contact details.">
+<meta property="og:title" content="Salon Name"><meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7f0;--alt:#f3ebdd;--ink:#2a2420;--mut:#645b52;--acc:#8c4a2f;--line:#e0d5c2;--dk:#2a2420}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,9vw,4rem)}h2{font-size:clamp(1.9rem,6vw,2.6rem)}h3{font-size:1.35rem}
+a{color:inherit}:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}.sec{padding:52px 0}.alt{background:var(--alt)}
+.eyebrow{color:var(--acc);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.mut{color:var(--mut)}
+header{position:sticky;top:0;z-index:10;background:var(--dk);color:#f5ede0}
+.nav{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:700;text-decoration:none}
+.menu{display:none;gap:24px}.menu a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}.menu a.on{border-color:#d9b26a}
+.bg{background:none;border:1px solid #6b6055;color:inherit;border-radius:6px;padding:10px 14px;min-height:44px;font:inherit}
+.dr{display:none;flex-direction:column;padding:0 20px 14px}.dr.open{display:flex}.dr a{padding:14px 0;border-top:1px solid #423a33;text-decoration:none}
+@media(min-width:800px){.menu{display:flex}.bg,.dr{display:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border:2px solid var(--acc);background:var(--acc);color:#fff;border-radius:4px;font:600 .95rem Inter,sans-serif;text-decoration:none;cursor:pointer}
+.btn.o{background:transparent;color:inherit;border-color:currentColor}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.hero{background:var(--dk);color:#f5ede0;padding:70px 0 80px}.hero p{max-width:540px;color:#d9cfbf;font-size:1.1rem}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.box{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px}
+.price li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.price ul{list-style:none;padding:0;margin:0}.price small{display:block;color:var(--mut)}.price b{white-space:nowrap}
+.gal{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.gal img,.gal .ph{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;background:linear-gradient(135deg,#dcd0b8,#bfae8e);display:flex;align-items:center;justify-content:center;text-align:center;font-size:.75rem;color:#3d372b;padding:6px}
+footer{background:var(--dk);color:#d9cfbf;padding:32px 0 90px;text-align:center;font-size:.9rem}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px;background:var(--dk);z-index:9}.bar .btn{flex:1}
+@media(min-width:800px){.bar{display:none}footer{padding-bottom:32px}}
+.pg{animation:f .3s ease}@keyframes f{from{opacity:0;transform:translateY(6px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<header><div class="wrap nav"><a class="logo" href="#/" id="lg"></a><nav class="menu" id="mn" aria-label="Main"></nav><button class="bg" id="bg" aria-expanded="false" aria-controls="dr">Menu</button></div><nav class="dr wrap" id="dr" aria-label="Mobile"></nav></header>
+<main id="app"></main>
+<div class="bar" id="bar"></div>
+<footer><div class="wrap" id="ft"></div></footer>
+<script>
+/* ===== EDIT ONLY THIS PART ===== */
+const C={
+NAME:"Salon Name",
+TAGLINE:"Haircuts, styling and care in a calm, welcoming space.",
+ABOUT:"[Write 2-3 lines about your salon here: who you are, your experience, what customers can expect.]",
+WHATSAPP:"",            // digits only with country code, e.g. 919876543210
+PHONE:"",               // e.g. +91 98765 43210
+SHOW_ADDRESS:true,
+ADDRESS:"[Add salon address here]",
+MAPS_URL:"",            // paste Google Maps share link (optional)
+HOURS:[["Mon–Sat","10:00 AM – 8:00 PM"],["Sunday","Closed"]],
+GALLERY:["IMG_20260920_185128.jpg","IMG_20260920_185131.jpg","IMG_20260920_185135.jpg"]  // photo file names, uploaded next to index.html
+};
+const SERVICES=[
+{cat:"Hair",items:[["Haircut","Cut and styling","₹XXX"],["Hair Styling","Everyday or event styling","₹XXX"],["Hair Spa","Deep conditioning treatment","₹XXX"]]},
+{cat:"Grooming",items:[["Beard Trim & Shape","Clean edges and shaping","₹XXX"],["Shave","Relaxing traditional shave","₹XXX"]]},
+{cat:"Skin",items:[["Cleanup Facial","Cleanse, mask, moisturise","₹XXX"]]}];
+/* ===== END EDIT ===== */
+const $=s=>document.querySelector(s);
+const wa=()=>C.WHATSAPP?`https://wa.me/${C.WHATSAPP.replace(/\D/g,"")}?text=${encodeURIComponent("Hello, I would like to book an appointment.")}`:"";
+const tel=()=>C.PHONE?`tel:${C.PHONE.replace(/[^\d+]/g,"")}`:"";
+const map=()=>C.MAPS_URL||`https://www.google.com/maps/search/${encodeURIComponent(C.ADDRESS)}`;
+const btnWA=(cls="")=>wa()?`<a class="btn ${cls}" href="${wa()}" target="_blank" rel="noopener">WhatsApp</a>`:"";
+const btnCall=(cls="")=>tel()?`<a class="btn ${cls}" href="${tel()}">Call Now</a>`:"";
+const NAV=[["","Home"],["services","Services & Prices"],["gallery","Gallery"],["contact","Contact"]];
+const P={
+"":()=>`<section class="hero"><div class="wrap"><div class="eyebrow" style="color:#d9b26a">Welcome</div><h1>${C.NAME}</h1><p>${C.TAGLINE}</p><div class="row" style="margin-top:22px"><a class="btn" href="#/services">View Services</a>${btnWA("o")||`<a class="btn o" href="#/contact">Contact Us</a>`}</div></div></section>
+<section class="sec"><div class="wrap"><div class="eyebrow">Highlights</div><h2>Popular services</h2><div class="grid">${SERVICES.flatMap(g=>g.items).slice(0,3).map(i=>`<div class="box"><h3>${i[0]}</h3><p class="mut" style="margin:0 0 8px">${i[1]}</p><b>${i[2]}</b></div>`).join("")}</div><p><a href="#/services">See full price list →</a></p></div></section>
+<section class="sec alt"><div class="wrap" style="max-width:720px"><div class="eyebrow">About us</div><h2>Welcome to ${C.NAME}</h2><p>${C.ABOUT}</p></div></section>`,
+services:()=>`<section class="sec"><div class="wrap price"><div class="eyebrow">Price list</div><h1 style="font-size:2.6rem">Services & Prices</h1>${SERVICES.map(g=>`<h2 style="margin-top:28px;font-size:1.7rem">${g.cat}</h2><ul>${g.items.map(i=>`<li><span>${i[0]}<small>${i[1]}</small></span><b>${i[2]}</b></li>`).join("")}</ul>`).join("")}<p class="mut" style="margin-top:20px">Prices may change. Please confirm on WhatsApp or call.</p><div class="row">${btnWA()}${btnCall("o")}</div></div></section>`,
+gallery:()=>`<section class="sec"><div class="wrap"><div class="eyebrow">Gallery</div><h1 style="font-size:2.6rem">Our work</h1><div class="gal">${C.GALLERY.length?C.GALLERY.map((f,i)=>`<img src="${f}" alt="Salon photo ${i+1}" loading="lazy" onerror="this.outerHTML='<div class=&quot;ph&quot;>Photo missing<br>${f}</div>'">`).join(""):"<p class=\"mut\">Photos will be added soon.</p>"}</div></div></section>`,
+contact:()=>`<section class="sec"><div class="wrap" style="max-width:720px"><div class="eyebrow">Contact</div><h1 style="font-size:2.6rem">Visit or contact us</h1><div class="box">${C.SHOW_ADDRESS?`<p><b>Address</b><br>${C.ADDRESS}</p>`:""}<p><b>Phone</b><br>${C.PHONE||"[Add phone number]"}</p><p><b>Opening hours</b></p>${C.HOURS.map(h=>`<div><b>${h[0]}</b>: ${h[1]}</div>`).join("")}<div class="row" style="margin-top:18px">${btnWA()}${btnCall("o")}${C.SHOW_ADDRESS?`<a class="btn o" href="${map()}" target="_blank" rel="noopener">Get Directions</a>`:""}</div>${wa()?"":`<p class="mut" style="font-size:.85rem">Add the WhatsApp number in the settings to show the WhatsApp button.</p>`}</div></div></section>`};
+function route(){const k=location.hash.slice(2);const f=P[k]||P[""];$("#app").innerHTML=`<div class="pg">${f()}</div>`;
+const n=NAV.map(x=>`<a href="#/${x[0]}" class="${x[0]===k?"on":""}">${x[1]}</a>`).join("");$("#mn").innerHTML=n;$("#dr").innerHTML=n;
+document.title=(k?NAV.find(x=>x[0]===k)?.[1]+" – ":"")+C.NAME;scrollTo(0,0)}
+addEventListener("hashchange",()=>{$("#dr").classList.remove("open");$("#bg").setAttribute("aria-expanded","false");route()});
+$("#bg").onclick=()=>{const o=$("#dr").classList.toggle("open");$("#bg").setAttribute("aria-expanded",o)};
+$("#lg").textContent=C.NAME;$("#ft").innerHTML=`© ${new Date().getFullYear()} ${C.NAME}`;
+$("#bar").innerHTML=(btnCall()+btnWA("o")).replace(/class="btn o"/,'class="btn o" style="color:#f5ede0"')||`<a class="btn" href="#/contact">Contact Us</a>`;
+route();
+</script></body></html>
