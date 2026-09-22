@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salon Name – Premium Salon & Barber</title>
+<meta name="description" content="Premium haircuts, beard grooming and styling. Services, prices, gallery and contact — all on one page.">
+<meta property="og:title" content="Salon Name"><meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Cinzel:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf3e2;--bg2:#221a12;--pn:#fffaf0;--pn2:#2b2015;--ink:#241a10;--ink2:#f7ecd6;--mut:#7a6a52;--mut2:#cdbe9e;--gold:#a9782e;--gold2:#7c5a1e;--gold3:#e7c877;--wine:#7a1f30;--emerald:#0e3b30;--line:#e6d6b3;--line2:#4a3a26}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;color:var(--ink);font:16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden;background-color:var(--bg);background-image:radial-gradient(circle at 1px 1px,rgba(169,120,46,.16) 1px,transparent 1.6px);background-size:26px 26px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;line-height:1.15;margin:0 0 .5em;letter-spacing:.01em}
+.brand,.logo,.eyebrow{font-family:Cinzel,serif}
+h1{font-size:clamp(2rem,8vw,3.4rem)}h2{font-size:clamp(1.5rem,5vw,2.1rem)}h3{font-size:1.1rem}
+a{color:inherit}:focus-visible{outline:3px solid var(--gold2);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px;position:relative}.sec{padding:52px 0}
+.eyebrow{color:var(--gold2);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+.mut{color:var(--mut)}
+.on-dark .mut{color:var(--mut2)}
+.on-dark{color:var(--ink2)}
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);margin:16px 0 22px;max-width:320px}.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.orn::after{transform:scaleX(-1)}
+.on-dark .orn{color:var(--gold3)}.on-dark .orn::before,.on-dark .orn::after{background:linear-gradient(90deg,transparent,var(--gold3))}
+header{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(34,26,18,.97);border-bottom:1px solid var(--gold3)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1000px;margin:0 auto;padding:0 20px}
+.logo{font-size:1.05rem;font-weight:600;letter-spacing:.2em;text-decoration:none;color:var(--gold3);text-transform:uppercase}
+.menu{display:none;gap:26px}.menu a{text-decoration:none;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut2)}.menu a:hover{color:var(--gold3)}
+.mbtn{background:none;border:1px solid var(--gold3);color:var(--gold3);border-radius:2px;padding:10px 14px;min-height:44px;font:600 .75rem Inter;letter-spacing:.16em;text-transform:uppercase}
+.dr{display:none;flex-direction:column;padding:0 20px 14px;background:rgba(34,26,18,.99);border-bottom:1px solid var(--gold3)}.dr.open{display:flex}.dr a{padding:14px 0;border-top:1px solid var(--line2);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;color:var(--mut2)}
+@media(min-width:800px){.menu{display:flex}.mbtn,.dr{display:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;border:1px solid var(--gold3);background:linear-gradient(135deg,var(--gold3),var(--gold));color:#241a10;font:600 .8rem Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:filter .2s,transform .2s;box-shadow:0 4px 14px rgba(169,120,46,.25)}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.btn.o{background:transparent;color:var(--ink)}
+.on-dark .btn.o{color:var(--gold3);border-color:var(--gold3)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+body{padding-top:60px}
+.hero{position:relative;overflow:hidden;padding:64px 0 60px;background:radial-gradient(ellipse at 80% 10%,rgba(231,200,119,.16),transparent 60%),linear-gradient(160deg,var(--bg2),#31251a 60%,var(--wine))}
+.hero p{max-width:520px;color:var(--mut2);font-size:1.08rem}
+.deco{position:absolute;right:-30px;top:50%;transform:translateY(-50%) rotate(-12deg);width:min(60vw,320px);opacity:.16;color:var(--gold3);pointer-events:none}
+.deco svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px}
+@media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{text-align:center;border-left:1px solid var(--line2);padding:6px 10px}.stat:first-child{border-left:0}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--gold3)}.stat span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut2)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{background:var(--pn);border:1px solid var(--line);border-radius:2px;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(36,26,16,.06);transition:border-color .2s,transform .2s,box-shadow .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 24px rgba(36,26,16,.12)}
+.im{width:100%;aspect-ratio:4/3;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a2c1c,#241a10);color:var(--gold3)}.im svg{width:64px;opacity:.7;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.meta{display:flex;justify-content:space-between;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.card p{margin:0;color:var(--mut);font-size:.95rem}
+.price{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font:700 1.4rem 'Playfair Display',serif;color:var(--gold2)}
+.cat{margin:34px 0 14px;color:var(--gold2)}
+.offer{background:linear-gradient(135deg,var(--wine),#4a1420 60%,var(--bg2));border:1px solid var(--gold3);padding:36px 26px;text-align:center;border-radius:2px}
+.offer h2{color:var(--gold3)}
+.rev{background:var(--pn);border:1px solid var(--line);padding:24px;border-radius:2px;box-shadow:0 2px 10px rgba(36,26,16,.06)}
+.rev p{margin:0 0 12px;color:var(--mut);font-style:italic;font-family:'Playfair Display',serif;font-size:1.05rem}.rev b{color:var(--gold2);font-size:.85rem;letter-spacing:.06em}
+.gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+.fr{margin:0;padding:6px;background:var(--pn);border:1px solid var(--gold)}.fr img,.fr div{width:100%;aspect-ratio:1;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a2c1c,#241a10);color:var(--mut);font-size:.7rem;text-align:center;letter-spacing:.1em;text-transform:uppercase}
+.box{background:var(--pn);border:1px solid var(--gold);padding:26px;border-radius:2px;box-shadow:0 2px 10px rgba(36,26,16,.06)}
+.pole{height:12px;background:repeating-linear-gradient(-45deg,var(--gold3) 0 10px,var(--wine) 10px 20px,var(--emerald) 20px 30px,var(--wine) 30px 40px);opacity:.9}
+footer{border-top:1px solid var(--gold3);background:var(--bg2);color:var(--mut2);padding:30px 0 96px;text-align:center;font-size:.85rem;letter-spacing:.08em}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg2);border-top:1px solid var(--gold3);z-index:9}.bar .btn{flex:1;padding:12px 8px}
+@media(min-width:800px){.bar{display:none}footer{padding-bottom:30px}body{padding-top:60px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#home" id="lg"></a><nav class="menu" id="mn" aria-label="Main"></nav><button class="mbtn" id="mb" aria-expanded="false" aria-controls="dr">Menu</button></div><nav class="dr" id="dr" aria-label="Mobile"></nav></header>
+<main id="app"></main>
+<div class="bar" id="bar"></div>
+<footer><div class="wrap" id="ft"></div></footer>
+<script>
+/* ===== EDIT ONLY THIS PART ===== */
+const C={
+NAME:"Salon Name",
+TAGLINE:"More than a look. A whole new confidence.",
+INTRO:"Premium grooming and styling in a calm, welcoming space.",
+YEARS:"14+",
+STATS:[["14+","Years experience"],["3,000+","Happy clients"],["4.9★","Average rating"],["7","Skilled stylists"]],
+ABOUT:"[Write 2-3 lines about your salon: who you are, your experience, and what customers can expect.]",
+OFFER_TITLE:"10% Discount",
+OFFER_TEXT:"[Describe your current offer here, or remove this section if there is none.]",
+WHATSAPP:"",            // digits only with country code, e.g. 919876543210
+PHONE:"",               // e.g. +91 98765 43210
+SHOW_ADDRESS:true,
+ADDRESS:"[Add salon address here]",
+MAPS_URL:"",            // Google Maps share link (optional)
+HOURS:[["Mon–Sat","10:00 AM – 8:00 PM"],["Sunday","Closed"]],
+GALLERY:[]              // photo file names uploaded next to index.html, e.g. ["cut1.jpg","cut2.jpg"]
+};
+const SERVICES=[
+{cat:"Haircut",name:"Classic Haircut",desc:"Precision cut with personalised styling.",price:"₹XXX",min:30,img:""},
+{cat:"Haircut",name:"Skin / Taper Fade",desc:"Clean fade blended to your preferred length.",price:"₹XXX",min:40,img:""},
+{cat:"Beard",name:"Beard Sculpt",desc:"Shaped and trimmed with sharp, clean edges.",price:"₹XXX",min:20,img:""},
+{cat:"Treatment",name:"Hair Spa",desc:"Deep conditioning for dry or tired hair.",price:"₹XXX",min:60,img:""},
+{cat:"Treatment",name:"Cleanup Facial",desc:"Cleanse, mask and moisturise.",price:"₹XXX",min:45,img:""},
+{cat:"Packages",name:"Haircut + Beard Package",desc:"Signature haircut with a sculpted beard finish.",price:"₹XXX",min:75,img:""}
+];
+const TESTIMONIALS=[["[Customer name]","Placeholder — replace with a genuine review."],["[Customer name]","Placeholder — replace with a genuine review."]];
+/* ===== END EDIT ===== */
+const $=s=>document.querySelector(s);
+const scissors='<svg viewBox="0 0 100 100"><circle cx="28" cy="80" r="10"/><circle cx="72" cy="80" r="10"/><path d="M34 72 68 12M66 72 32 12"/></svg>';
+const mirror='<svg viewBox="0 0 100 100"><ellipse cx="50" cy="38" rx="28" ry="32"/><ellipse cx="50" cy="38" rx="21" ry="25"/><path d="M50 70v22M38 92h24"/></svg>';
+function phimg(el){const d=document.createElement("div");d.className="im";d.innerHTML=scissors;el.replaceWith(d)}
+const waNum=()=>C.WHATSAPP.replace(/\D/g,"");
+const wa=t=>waNum()?`https://wa.me/${waNum()}?text=${encodeURIComponent(t||"Hello, I would like to know more about your services.")}`:"";
+const tel=()=>C.PHONE?`tel:${C.PHONE.replace(/[^\d+]/g,"")}`:"";
+const map=()=>C.MAPS_URL||(C.ADDRESS&&!C.ADDRESS.startsWith("[")?`https://www.google.com/maps/search/${encodeURIComponent(C.ADDRESS)}`:"");
+const bWA=(c="")=>wa()?`<a class="btn ${c}" href="${wa()}" target="_blank" rel="noopener">WhatsApp</a>`:"";
+const bCall=(c="")=>tel()?`<a class="btn ${c}" href="${tel()}">Call Now</a>`:"";
+const card=s=>`<article class="card">${s.img?`<img class="im" src="${s.img}" alt="${s.name}" loading="lazy" onerror="phimg(this)">`:`<div class="im" role="img" aria-label="${s.name}">${scissors}</div>`}<div class="b"><div class="meta"><span>${s.cat}</span><span>${s.min} min</span></div><h3>${s.name}</h3><p>${s.desc}</p><div class="price">${s.price}</div></div></article>`;
+const NAV=[["home","Home"],["services","Services"],["gallery","Gallery"],["contact","Contact"]];
+function render(){
+$("#app").innerHTML=`
+<section id="home" class="hero on-dark"><div class="deco" aria-hidden="true">${scissors}</div><div class="wrap"><div class="eyebrow">Welcome</div><h1>${C.NAME}</h1><div class="orn">◆</div><p>${C.TAGLINE}</p><p class="mut">${C.INTRO}</p><div class="row" style="margin-top:20px"><a class="btn" href="#services">View Services</a>${bWA("o")||'<a class="btn o" href="#contact">Contact Us</a>'}</div><div class="stats">${C.STATS.map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div></div></section>
+
+<section id="services" class="sec" style="background:var(--pn)"><div class="wrap"><div class="eyebrow">Signature</div><h2>Our Services</h2><div class="orn">◆</div>${[...new Set(SERVICES.map(s=>s.cat))].map(c=>`<h3 class="cat">${c}</h3><div class="grid">${SERVICES.filter(s=>s.cat===c).map(card).join("")}</div>`).join("")}<p class="mut" style="margin-top:20px">Prices may change. Please confirm on WhatsApp or call.</p></div></section>
+
+<section class="sec"><div class="wrap" style="max-width:720px"><div class="eyebrow">About us</div><h2>Excellence, every appointment</h2><div class="orn">◆</div><p class="mut">${C.ABOUT}</p></div></section>
+
+<section class="sec on-dark" style="background:var(--bg2)"><div class="wrap"><div class="offer"><div class="eyebrow" style="color:var(--gold2)">Limited time</div><h2>${C.OFFER_TITLE}</h2><p class="mut" style="max-width:480px;margin:0 auto 18px">${C.OFFER_TEXT}</p>${bWA()||`<a class="btn" href="#contact">Ask About This Offer</a>`}</div></div></section>
+
+<section class="sec" style="background:var(--pn)"><div class="wrap"><div class="eyebrow">Reviews</div><h2>Clients Loved It</h2><div class="orn">◆</div><div class="grid">${TESTIMONIALS.map(t=>`<div class="rev"><p>“${t[1]}”</p><b>— ${t[0]}</b></div>`).join("")}</div></div></section>
+
+<section id="gallery" class="sec"><div class="wrap"><div class="eyebrow">Gallery</div><h2>Our Work</h2><div class="orn">◆</div><div class="gal">${(C.GALLERY.length?C.GALLERY:[1,2,3,4,5,6]).map((f,i)=>`<figure class="fr">${C.GALLERY.length?`<img src="${f}" alt="Salon photo ${i+1}" loading="lazy" onerror="this.outerHTML='<div>Photo missing</div>'">`:"<div>Add photo</div>"}</figure>`).join("")}</div></div></section>
+
+<div class="pole"></div>
+<section id="contact" class="sec on-dark" style="background:var(--bg2)"><div class="wrap" style="max-width:720px"><div class="eyebrow">Contact</div><h2>Visit Us</h2><div class="orn">◆</div><div class="box">${C.SHOW_ADDRESS?`<p><b>Address</b><br>${C.ADDRESS}</p>`:""}<p><b>Phone</b><br>${C.PHONE||"[Add phone number]"}</p><p><b>Opening hours</b></p>${C.HOURS.map(h=>`<div>${h[0]}: ${h[1]}</div>`).join("")}<div class="row" style="margin-top:20px">${bWA()}${bCall("o")}${map()?`<a class="btn o" href="${map()}" target="_blank" rel="noopener">Get Directions</a>`:""}</div>${wa()?"":'<p class="mut" style="font-size:.85rem">Add the WhatsApp number in the settings to show the WhatsApp button.</p>'}</div></div></section>`;
+$("#mn").innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");
+$("#dr").innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");
+$("#lg").textContent=C.NAME;
+$("#ft").innerHTML=`◆ © ${new Date().getFullYear()} ${C.NAME} ◆`;
+$("#bar").innerHTML=(bCall()+bWA("o"))||'<a class="btn" href="#contact">Contact Us</a>';
+}
+document.addEventListener("click",e=>{
+if(e.target.id==="mb"){const o=$("#dr").classList.toggle("open");$("#mb").setAttribute("aria-expanded",o);return}
+if(e.target.closest("#dr a"))$("#dr").classList.remove("open");
+});
+render();
+</script></body></html>
