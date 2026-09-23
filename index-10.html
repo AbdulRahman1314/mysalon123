@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salon Name – Premium Salon & Barber</title>
+<meta name="description" content="Premium haircuts, beard grooming and styling. Services, prices, gallery and contact — all on one page.">
+<meta property="og:title" content="Salon Name"><meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@600;700&family=Cinzel:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fefdfb;--bg2:#ffffff;--pn:#ffffff;--ink:#241d13;--ink2:#241d13;--mut:#6d6252;--mut2:#6d6252;--gold:#a9782e;--gold2:#8a6224;--gold3:#c9a24e;--wine:#7a1f30;--emerald:#123b30;--line:#e7dcc2;--line2:#e7dcc2;--white:#ffffff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;color:var(--ink);font:16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden;background-color:var(--bg);background-image:radial-gradient(circle at 1px 1px,rgba(169,120,46,.16) 1px,transparent 1.6px);background-size:26px 26px;padding-top:60px}
+h1,h2{font-family:'Dancing Script',cursive;font-weight:700;line-height:1.1;margin:0 0 .35em}
+h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2.6rem,10vw,4.4rem)}h2{font-size:clamp(2.1rem,7vw,3rem)}
+.brand,.logo,.eyebrow{font-family:Cinzel,serif}
+a{color:inherit}:focus-visible{outline:3px solid var(--gold3);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px;position:relative}.sec{padding:56px 0}
+.eyebrow{color:var(--gold2);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+.mut{color:var(--mut)}.on-dark{color:var(--ink2)}.on-dark .mut{color:var(--mut2)}
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);margin:16px 0 22px;max-width:320px}.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}.orn::after{transform:scaleX(-1)}
+.on-dark .orn{color:var(--gold3)}.on-dark .orn::before,.on-dark .orn::after{background:linear-gradient(90deg,transparent,var(--gold3))}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(254,253,251,.97);border-bottom:1px solid var(--gold)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1040px;margin:0 auto;padding:0 20px}
+.logo{font-family:'Dancing Script',cursive;font-size:1.5rem;font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--ink)}
+.menu{display:none;gap:26px}.menu a{text-decoration:none;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}.menu a:hover{color:var(--gold)}
+.mbtn{background:none;border:1px solid var(--gold);color:var(--ink);border-radius:2px;padding:10px 14px;min-height:44px;font:600 .75rem Inter;letter-spacing:.16em;text-transform:uppercase}
+.dr{display:none;flex-direction:column;padding:0 20px 14px;background:#fff;border-bottom:1px solid var(--gold)}.dr.open{display:flex}.dr a{padding:14px 0;border-top:1px solid var(--line2);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;color:var(--ink)}
+@media(min-width:800px){.menu{display:flex}.mbtn,.dr{display:none!important}}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 28px;border:1px solid var(--gold);background:linear-gradient(135deg,var(--gold2),var(--gold) 60%,var(--gold3));color:#fff;font:600 .8rem Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:filter .2s,transform .2s;box-shadow:0 6px 16px rgba(169,120,46,.28)}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}.btn.o{background:transparent;color:var(--ink);border-color:var(--gold);box-shadow:none}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.hero{position:relative;overflow:hidden;padding:64px 0 60px;background:radial-gradient(ellipse at 80% 5%,rgba(169,120,46,.14),transparent 60%),var(--bg);border-bottom:1px solid var(--line)}
+.hero.has-vid{padding:0;border-bottom:1px solid var(--gold)}
+.hero-vid-wrap{position:relative;width:100%;aspect-ratio:9/13;max-height:88vh;overflow:hidden}
+@media(min-width:800px){.hero-vid-wrap{aspect-ratio:21/9;max-height:70vh}}
+.hero-vid-wrap video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-vid-wrap .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,.55),rgba(10,9,8,.75) 70%,var(--bg) 100%)}
+.hero-vid-wrap .wrap{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:32px;color:#fff}
+.hero-vid-wrap .wrap p{color:#e9e2d3}
+.hero-vid-wrap .eyebrow{color:var(--gold3)}
+.hero-vid-wrap .orn{color:var(--gold3)}.hero-vid-wrap .orn::before,.hero-vid-wrap .orn::after{background:linear-gradient(90deg,transparent,var(--gold3))}
+.hero p{max-width:520px;color:var(--mut);font-size:1.08rem}
+.deco{position:absolute;right:-30px;top:50%;transform:translateY(-50%) rotate(-12deg);width:min(58vw,300px);opacity:.1;color:var(--gold);pointer-events:none}
+.deco svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:32px}
+@media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{text-align:center;border-left:1px solid var(--line);padding:6px 10px}.stat:first-child{border-left:0}
+.stat b{display:block;font-family:'Dancing Script',cursive;font-size:2.2rem;font-weight:700;color:var(--ink)}.stat span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2)}
+/* carousel */
+.car-wrap{margin-top:38px}
+.car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.car::-webkit-scrollbar{height:0}
+.car .sl{flex:0 0 78%;max-width:280px;scroll-snap-align:start;aspect-ratio:3/4;border:1px solid var(--gold3);border-radius:2px;padding:5px;background:rgba(0,0,0,.15)}
+.car .sl img,.car .sl div{width:100%;height:100%;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a2c1c,#241a10);color:var(--gold3);font-size:.72rem;text-align:center;padding:8px}
+.car-ctl{display:flex;gap:10px;margin-top:14px}
+.car-ctl button{width:40px;height:40px;border-radius:50%;border:1px solid var(--gold3);background:transparent;color:var(--gold3);font-size:1.1rem;cursor:pointer}
+.car-ctl button:hover{background:rgba(231,200,119,.12)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--pn);border:1px solid var(--line);border-radius:2px;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(36,29,19,.08);transition:border-color .2s,transform .2s,box-shadow .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 14px 30px rgba(36,29,19,.14)}
+.im{width:100%;aspect-ratio:3/4;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a2c1c,#241a10);color:var(--gold3)}.im svg{width:56px;opacity:.7;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.meta{display:flex;justify-content:space-between;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.card p{margin:0;color:var(--mut);font-size:.95rem}
+.price{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font:700 1.4rem 'Cormorant Garamond',serif;color:var(--gold2)}
+.cat{margin:34px 0 14px;color:var(--gold2)}
+/* achievements */
+.ach{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:8px}
+.ach .a{text-align:center;padding:22px 14px;border:1px solid var(--line);background:var(--pn);border-radius:2px;box-shadow:0 4px 14px rgba(36,29,19,.08)}
+.ach .ic{width:44px;height:44px;margin:0 auto 12px;color:var(--gold2)}.ach .ic svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ach b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--white)}
+/* features (2 extra) */
+.feat{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.feat .f{padding:24px;border:1px solid var(--line);background:var(--pn);border-radius:2px;box-shadow:0 4px 14px rgba(36,29,19,.08)}
+.feat .ic{width:38px;height:38px;color:var(--gold2);margin-bottom:10px}.feat .ic svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.offer{background:linear-gradient(135deg,#fbf3e2,#fff 60%);border:1px solid var(--gold);padding:38px 26px;text-align:center;border-radius:2px;box-shadow:0 6px 20px rgba(169,120,46,.12)}
+.offer h2{color:var(--gold2)}
+.rev{background:var(--pn);border:1px solid var(--line);padding:24px;border-radius:2px;box-shadow:0 4px 14px rgba(36,29,19,.08)}
+.rev p{margin:0 0 12px;color:var(--mut);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.1rem}.rev b{color:var(--gold2);font-size:.85rem;letter-spacing:.06em}
+/* gallery banding */
+.gal{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.fr{margin:0;padding:7px;background:var(--pn);border:1px solid var(--gold);border-radius:2px;box-shadow:0 8px 20px rgba(36,29,19,.12)}
+.fr img,.fr div{width:100%;aspect-ratio:3/4;object-fit:cover;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a2c1c,#241a10);color:var(--mut);font-size:.7rem;text-align:center;letter-spacing:.1em;text-transform:uppercase;border-radius:1px}
+.gal .fr:nth-child(2n){transform:translateY(22px)}
+.gal .fr:nth-child(3n){transform:translateY(-10px)}
+@media(max-width:520px){.gal .fr{transform:none!important}}
+.box{background:var(--pn);border:1px solid var(--gold);padding:26px;border-radius:2px;box-shadow:0 4px 14px rgba(36,29,19,.08)}
+.cbox{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:24px}
+.cbox .item{display:flex;gap:14px;align-items:flex-start}
+.cbox .ic{width:34px;height:34px;flex:none;color:var(--gold2)}.cbox .ic svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pole{height:12px;background:repeating-linear-gradient(-45deg,var(--white) 0 8px,var(--gold3) 8px 18px,var(--wine) 18px 28px,var(--gold3) 28px 38px);opacity:.95}
+footer{border-top:1px solid var(--gold);background:#fff;color:var(--mut);padding:30px 0 96px;text-align:center;font-size:.85rem;letter-spacing:.08em}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid var(--gold);z-index:9}.bar .btn{flex:1;padding:12px 8px}
+@media(min-width:800px){.bar{display:none}footer{padding-bottom:30px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#home" id="lg"></a><nav class="menu" id="mn" aria-label="Main"></nav><button class="mbtn" id="mb" aria-expanded="false" aria-controls="dr">Menu</button></div><nav class="dr" id="dr" aria-label="Mobile"></nav></header>
+<main id="app"></main>
+<div class="bar" id="bar"></div>
+<footer><div class="wrap" id="ft"></div></footer>
+<script>
+/* ===== EDIT ONLY THIS PART ===== */
+const C={
+NAME:"Salon Name",
+TAGLINE:"More than a look. A whole new confidence.",
+INTRO:"Premium grooming and styling in a calm, welcoming space.",
+STATS:[["14+","Years experience"],["3,000+","Happy clients"],["4.9★","Average rating"],["7","Skilled stylists"]],
+ABOUT:"[Write 2-3 lines about your salon: who you are, your experience, and what customers can expect.]",
+OFFER_TITLE:"10% Discount",
+OFFER_TEXT:"[Describe your current offer here, or remove this section if there is none.]",
+WHATSAPP:"",            // digits only with country code, e.g. 919876543210
+PHONE:"",               // e.g. +91 98765 43210
+SHOW_ADDRESS:true,
+ADDRESS:"[Add salon address here]",
+MAPS_URL:"",            // Google Maps share link (optional)
+HOURS:[["Mon–Sat","10:00 AM – 8:00 PM"],["Sunday","Closed"]],
+HERO_VIDEO:"hero-video.mp4", // looping background video file name, uploaded next to index.html. Leave "" to hide.
+GALLERY:["hair-collection.jpg","barber-fade.jpg","blow-dry.jpg","facial-mask.jpg"],  // photo file names uploaded next to index.html
+SLIDES:["blow-dry.jpg","barber-fade.jpg","hair-collection.jpg","facial-mask.jpg"]    // hero carousel photo file names
+};
+const SERVICES=[
+{cat:"Haircut",name:"Classic Haircut",desc:"Precision cut with personalised styling.",price:"₹XXX",min:30,img:""},
+{cat:"Haircut",name:"Skin / Taper Fade",desc:"Clean fade blended to your preferred length.",price:"₹XXX",min:40,img:"barber-fade.jpg"},
+{cat:"Beard",name:"Beard Sculpt",desc:"Shaped and trimmed with sharp, clean edges.",price:"₹XXX",min:20,img:""},
+{cat:"Treatment",name:"Hair Spa",desc:"Deep conditioning, blow-dry and finish for healthy, shining hair.",price:"₹XXX",min:60,img:"blow-dry.jpg"},
+{cat:"Treatment",name:"Cleanup Facial",desc:"Cleanse, mask and moisturise.",price:"₹XXX",min:45,img:"facial-mask.jpg"},
+{cat:"Packages",name:"Haircut + Beard Package",desc:"Signature haircut with a sculpted beard finish.",price:"₹XXX",min:75,img:""}
+];
+const TESTIMONIALS=[["[Customer name]","Placeholder — replace with a genuine review."],["[Customer name]","Placeholder — replace with a genuine review."]];
+const ACHIEVEMENTS=[["award","Excellence Award","[e.g. Best Salon 2024 — add if real]"],["star","4.9★ Rated","Based on client reviews"],["users","3,000+ Clients","Trusted since day one"],["seal","Certified Stylists","Trained in modern techniques"]];
+const FEATURES=[["chair","Premium Interiors","A calm, comfortable space designed for your visit."],["shield","Hygienic Tools","Sanitised equipment for every single client."],["sparkle","Quality Products","We use trusted, professional-grade products."],["clock","On-Time Service","Your appointment starts when it should."]];
+/* ===== END EDIT ===== */
+const $=s=>document.querySelector(s);
+const ICON={
+scissors:'<svg viewBox="0 0 100 100"><circle cx="28" cy="80" r="10"/><circle cx="72" cy="80" r="10"/><path d="M34 72 68 12M66 72 32 12"/></svg>',
+award:'<svg viewBox="0 0 100 100"><circle cx="50" cy="36" r="24"/><path d="M36 56 26 92l24-12 24 12-10-36"/></svg>',
+star:'<svg viewBox="0 0 100 100"><path d="M50 8 61 38 93 38 67 58 77 90 50 70 23 90 33 58 7 38 39 38z"/></svg>',
+users:'<svg viewBox="0 0 100 100"><circle cx="36" cy="34" r="14"/><circle cx="70" cy="40" r="11"/><path d="M12 88c2-20 16-30 24-30s22 10 24 30M58 88c2-16 10-24 20-26 8 2 14 10 16 26"/></svg>',
+seal:'<svg viewBox="0 0 100 100"><path d="M50 10 60 24 78 20 78 38 92 50 78 62 78 80 60 76 50 90 40 76 22 80 22 62 8 50 22 38 22 20 40 24z"/></svg>',
+chair:'<svg viewBox="0 0 100 100"><path d="M26 20h48v34H26zM30 54v30M70 54v30M26 84h48"/></svg>',
+shield:'<svg viewBox="0 0 100 100"><path d="M50 8 86 22v26c0 26-16 40-36 44C30 88 14 74 14 48V22z"/></svg>',
+sparkle:'<svg viewBox="0 0 100 100"><path d="M50 10c2 20 8 26 28 28-20 2-26 8-28 28-2-20-8-26-28-28 20-2 26-8 28-28z"/></svg>',
+clock:'<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38"/><path d="M50 28v22l16 12"/></svg>',
+map:'<svg viewBox="0 0 100 100"><path d="M50 90S22 60 22 38a28 28 0 0 1 56 0c0 22-28 52-28 52z"/><circle cx="50" cy="38" r="10"/></svg>',
+phone:'<svg viewBox="0 0 100 100"><path d="M22 16c6-4 12-6 16-2l8 12c2 4 0 8-4 10l-6 4c4 12 14 22 26 26l4-6c2-4 6-6 10-4l12 8c4 4 2 10-2 16-6 8-18 10-28 6C36 78 22 64 14 42 10 32 12 20 20 14z"/></svg>',
+clockS:'<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38"/><path d="M50 28v22l16 12"/></svg>'
+};
+function phimg(el){const d=document.createElement("div");d.className="im";d.innerHTML=ICON.scissors;el.replaceWith(d)}
+const waNum=()=>C.WHATSAPP.replace(/\D/g,"");
+const wa=t=>waNum()?`https://wa.me/${waNum()}?text=${encodeURIComponent(t||"Hello, I would like to know more about your services.")}`:"";
+const tel=()=>C.PHONE?`tel:${C.PHONE.replace(/[^\d+]/g,"")}`:"";
+const map=()=>C.MAPS_URL||(C.ADDRESS&&!C.ADDRESS.startsWith("[")?`https://www.google.com/maps/search/${encodeURIComponent(C.ADDRESS)}`:"");
+const bWA=(c="")=>wa()?`<a class="btn ${c}" href="${wa()}" target="_blank" rel="noopener">WhatsApp</a>`:"";
+const bCall=(c="")=>tel()?`<a class="btn ${c}" href="${tel()}">Call Now</a>`:"";
+const bookCall=(c="")=>tel()?`<a class="btn ${c}" href="${tel()}">Book Now — Call</a>`:`<a class="btn ${c}" href="#contact">Book Now</a>`;
+const card=s=>`<article class="card">${s.img?`<img class="im" src="${s.img}" alt="${s.name}" loading="lazy" onerror="phimg(this)">`:`<div class="im" role="img" aria-label="${s.name}">${ICON.scissors}</div>`}<div class="b"><div class="meta"><span>${s.cat}</span><span>${s.min} min</span></div><h3>${s.name}</h3><p>${s.desc}</p><div class="price">${s.price}</div></div></article>`;
+const NAV=[["home","Home"],["services","Services"],["gallery","Gallery"],["contact","Contact"]];
+function render(){
+const slides=(C.SLIDES.length?C.SLIDES:[1,2,3,4]).map((f,i)=>`<div class="sl">${C.SLIDES.length?`<img src="${f}" alt="Look ${i+1}" loading="lazy" onerror="this.outerHTML='<div>Photo missing</div>'">`:`<div>Add photo<br>look${i+1}.jpg</div>`}</div>`).join("");
+
+$("#app").innerHTML=`
+<section id="home" class="hero on-dark${C.HERO_VIDEO?" has-vid":""}">${C.HERO_VIDEO?`<div class="hero-vid-wrap"><video autoplay muted loop playsinline onerror="this.closest('.hero-vid-wrap').style.display='none';document.getElementById('home').classList.remove('has-vid')"><source src="${C.HERO_VIDEO}" type="video/mp4"></video><div class="ov"></div><div class="wrap"><div class="eyebrow">Welcome</div><h1>${C.NAME}</h1><div class="orn">◆</div><p>${C.TAGLINE}</p><div class="row" style="margin-top:16px"><a class="btn" href="#services">View Services</a>${bWA("o")||'<a class="btn o" href="#contact">Contact Us</a>'}</div></div></div>`:`<div class="deco" aria-hidden="true">${ICON.scissors}</div><div class="wrap"><div class="eyebrow">Welcome</div><h1>${C.NAME}</h1><div class="orn">◆</div><p>${C.TAGLINE}</p><p class="mut">${C.INTRO}</p><div class="row" style="margin-top:20px"><a class="btn" href="#services">View Services</a>${bWA("o")||'<a class="btn o" href="#contact">Contact Us</a>'}</div></div>`}
+<div class="wrap"><div class="stats">${C.STATS.map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div>
+<div class="car-wrap"><div class="eyebrow" style="margin-bottom:6px">Signature Looks</div><div class="car" id="car">${slides}</div><div class="car-ctl"><button id="cp" aria-label="Previous">‹</button><button id="cn" aria-label="Next">›</button></div></div>
+</div></section>
+
+<section id="services" class="sec" style="background:#fbf7ee"><div class="wrap"><div class="eyebrow">Signature</div><h2>Our Services</h2><div class="orn">◆</div>${[...new Set(SERVICES.map(s=>s.cat))].map(c=>`<h3 class="cat">${c}</h3><div class="grid">${SERVICES.filter(s=>s.cat===c).map(card).join("")}</div>`).join("")}<p class="mut" style="margin-top:20px">Prices may change. Please confirm on WhatsApp or call.</p></div></section>
+
+<section class="sec"><div class="wrap" style="max-width:720px"><div class="eyebrow">About us</div><h2>Excellence, every appointment</h2><div class="orn">◆</div><p class="mut">${C.ABOUT}</p></div></section>
+
+<section class="sec"><div class="wrap"><div class="eyebrow">What Sets Us Apart</div><h2>Our Promise</h2><div class="orn">◆</div><div class="feat">${FEATURES.map(f=>`<div class="f"><div class="ic">${ICON[f[0]]}</div><h3 style="font-size:1.1rem">${f[1]}</h3><p class="mut" style="margin:0">${f[2]}</p></div>`).join("")}</div></div></section>
+
+<section class="sec" style="background:#fbf7ee"><div class="wrap"><div class="eyebrow">Recognition</div><h2>Our Achievements</h2><div class="orn">◆</div><div class="ach">${ACHIEVEMENTS.map(a=>`<div class="a"><div class="ic">${ICON[a[0]]}</div><b>${a[1]}</b><p class="mut" style="margin:4px 0 0;font-size:.88rem">${a[2]}</p></div>`).join("")}</div></div></section>
+
+<section class="sec"><div class="wrap"><div class="offer"><div class="eyebrow" style="color:var(--gold2)">Limited time</div><h2>${C.OFFER_TITLE}</h2><p class="mut" style="max-width:480px;margin:0 auto 18px">${C.OFFER_TEXT}</p>${bookCall()}</div></div></section>
+
+<section class="sec" style="background:#fbf7ee"><div class="wrap"><div class="eyebrow">Reviews</div><h2>Clients Loved It</h2><div class="orn">◆</div><div class="grid">${TESTIMONIALS.map(t=>`<div class="rev"><p>“${t[1]}”</p><b>— ${t[0]}</b></div>`).join("")}</div></div></section>
+
+<section id="gallery" class="sec"><div class="wrap"><div class="eyebrow">Gallery</div><h2>Our Work</h2><div class="orn">◆</div><div class="gal">${(C.GALLERY.length?C.GALLERY:[1,2,3,4,5,6]).map((f,i)=>`<figure class="fr">${C.GALLERY.length?`<img src="${f}" alt="Salon photo ${i+1}" loading="lazy" onerror="this.outerHTML='<div>Photo missing</div>'">`:"<div>Add photo</div>"}</figure>`).join("")}</div></div></section>
+
+<div class="pole"></div>
+<section id="contact" class="sec"><div class="wrap" style="max-width:760px"><div class="eyebrow">Contact</div><h2>Visit Us</h2><div class="orn">◆</div><div class="box">
+<div class="cbox">
+${C.SHOW_ADDRESS?`<div class="item"><div class="ic">${ICON.map}</div><div><b style="display:block;color:var(--gold2)">Address</b><span class="mut">${C.ADDRESS}</span></div></div>`:""}
+<div class="item"><div class="ic">${ICON.phone}</div><div><b style="display:block;color:var(--gold2)">Phone</b><span class="mut">${C.PHONE||"[Add phone number]"}</span></div></div>
+<div class="item"><div class="ic">${ICON.clockS}</div><div><b style="display:block;color:var(--gold2)">Hours</b>${C.HOURS.map(h=>`<span class="mut" style="display:block">${h[0]}: ${h[1]}</span>`).join("")}</div></div>
+</div>
+<div class="row" style="margin-top:24px">${bWA()}${bCall("o")}${map()?`<a class="btn o" href="${map()}" target="_blank" rel="noopener">Get Directions</a>`:""}</div>${wa()?"":'<p class="mut" style="font-size:.85rem;margin-top:10px">Add the WhatsApp number in the settings to show the WhatsApp button.</p>'}
+</div></div></section>`;
+$("#mn").innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");
+$("#dr").innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");
+$("#lg").textContent=C.NAME;
+$("#ft").innerHTML=`◆ © ${new Date().getFullYear()} ${C.NAME} ◆`;
+$("#bar").innerHTML=(bCall()+bWA("o"))||'<a class="btn" href="#contact">Contact Us</a>';
+const car=$("#car");
+$("#cn")?.addEventListener("click",()=>car.scrollBy({left:240,behavior:"smooth"}));
+$("#cp")?.addEventListener("click",()=>car.scrollBy({left:-240,behavior:"smooth"}));
+}
+document.addEventListener("click",e=>{
+if(e.target.id==="mb"){const o=$("#dr").classList.toggle("open");$("#mb").setAttribute("aria-expanded",o);return}
+if(e.target.closest("#dr a"))$("#dr").classList.remove("open");
+});
+render();
+</script></body></html>
